@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn_food_delivery_app/themes/app_theme.dart';
 import 'package:learn_food_delivery_app/routes/app_router.dart';
 
 void main() {
@@ -13,7 +14,9 @@ class RestaurantApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.system,
       routerConfig: AppRouter.router,
     );
   }
